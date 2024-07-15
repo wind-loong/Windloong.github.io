@@ -178,7 +178,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-07-15 14:55:46 / 修改时间：15:18:50" itemprop="dateCreated datePublished" datetime="2024-07-15T14:55:46+08:00">2024-07-15</time>
+      <time title="创建时间：2024-07-15 14:55:46 / 修改时间：15:34:20" itemprop="dateCreated datePublished" datetime="2024-07-15T14:55:46+08:00">2024-07-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -297,7 +297,7 @@
 <blockquote>
 <p>参考Hexo 的<a target="_blank" rel="noopener" href="https://hexo.io/docs/">官方文档</a>或 GitHub Pages 的<a target="_blank" rel="noopener" href="https://pages.github.com/">官方指南</a>。</p>
 </blockquote>
-<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><h3 id="使用-Hexo-管理博客内容"><a href="#使用-Hexo-管理博客内容" class="headerlink" title="使用 Hexo 管理博客内容"></a>使用 Hexo 管理博客内容</h3><ol>
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><h3 id="使用-Hexo-添加博客"><a href="#使用-Hexo-添加博客" class="headerlink" title="使用 Hexo 添加博客"></a>使用 Hexo 添加博客</h3><ol>
 <li><p><strong>创建文章</strong>: 使用 Hexo 创建新文章的命令：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -321,6 +321,53 @@
 <li><p><strong>部署</strong>: </p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
 </ol>
+<h3 id="创建分类"><a href="#创建分类" class="headerlink" title="创建分类"></a>创建分类</h3><ol>
+<li><p>输入<code>hexo new page &#39;categories&#39;</code></p>
+</li>
+<li><p>在📁 source中会看到📁 categories</p>
+</li>
+<li><p>修改📁 categories中的index.md档案，插入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">--- </span><br><span class="line">title:  Categories </span><br><span class="line">date:  2020-10-22 11:16:05 </span><br><span class="line">type:  &quot;categories&quot; </span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在_post内的其中一份档案插入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">categories: hexo教学</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">--- </span><br><span class="line">title: 文章标题</span><br><span class="line">data: </span><br><span class="line">categories:  hexo教学</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新产生静态档案，可以在导览列看到多了一个分类分页</p>
+</li>
+</ol>
+<h3 id="使用图片"><a href="#使用图片" class="headerlink" title="使用图片"></a>使用图片</h3><p>见<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders">官方文档</a></p>
+<h3 id="建立404页面"><a href="#建立404页面" class="headerlink" title="建立404页面"></a>建立404页面</h3><h2 id="建立404页面-1"><a href="#建立404页面-1" class="headerlink" title="建立404页面"></a>建立404页面</h2><ol>
+<li><p>输入<code>hexo new page 404</code></p>
+</li>
+<li><p>在📁source\404\index.md 增加以下资讯</p>
+<ul>
+<li><p>comments，若之后有开启评论功能，在这边先将它关闭</p>
+</li>
+<li><p>permalink，网站中的固定连结</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--- </span><br><span class="line">title:  404  - 您似乎来到不对的地方~ </span><br><span class="line">date:  2020-10-27 13:45:41 </span><br><span class="line">comments:  false </span><br><span class="line">permalink:  /404 </span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>增加页面说明文字。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## 您要找的网页不存在。</span><br><span class="line"></span><br><span class="line">很抱歉，您目前存取的页面不存在。</span><br><span class="line"></span><br><span class="line">请点击[这里]( https://您的帐号.github.io/ )回首页。</span><br></pre></td></tr></table></figure>
+
+<p>建立好上述资讯后重新建立静态档案，github的预设404页面就会使用我们新建的404页面了。</p>
+</li>
+</ol>
+<p>另外，在github中有两种方式都能读取到404页面，</p>
+<ul>
+<li>若404路径为📁source\404\index.md<ul>
+<li>permalink就设定为<code>permalink: /404</code></li>
+</ul>
+</li>
+<li>若404路径为📁source\404.md<ul>
+<li>permalink就设定为<code>permalink: /404.html</code></li>
+</ul>
+</li>
+</ul>
 
       
     </div>
