@@ -2224,7 +2224,8 @@ header.header {
   }
 }
 .site-brand-container {
-  background: var(--theme-color);
+  background: url("/images/star_sky.jpg");
+  background-size: cover;
 }
 @media (max-width: 991px) {
   .site-nav-on .site-brand-container {
